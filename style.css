@@ -1,49 +1,61 @@
+body {
+    font-family: 'Raleway Dots', cursive;
+    text-align: center;
+    background-color: tomato;
+
+}
+
 .grid-container {
     padding-top: 5vh;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: 10vh 5vh 60vh 5vh;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 10vh 5vh 600px 5vh;
     grid-template-areas: 
         'header header header'
         'blackButton randomButton chooseButton'
-        'drawGrid drawGrid drawGrid'
+        'gridArea gridArea gridArea'
         'clearButton . sizeButton';
-    border: 1px solid black;
 }
 
 .header {
     grid-area: header;
-    border: 1px solid blue;
 }
 
 .blackButton {
     grid-area: blackButton;
-    border: 1px solid blue;
 }
 
 .randomButton {
     grid-area: randomButton;
-    border: 1px solid blue;
 }
 
 .chooseButton {
-    grid-area: chooseButton; 
-    border: 1px solid blue;   
+    grid-area: chooseButton;
 }
 
-.drawGrid {
-    grid-area: drawGrid;
-    border: 1px solid blue;
+.gridArea {    
+    grid-area: gridArea;
+    border: 2vh solid red;
+    display: grid;
+    grid-template-columns: repeat(var(--sideLength), 1fr);
+    grid-template-rows: repeat(var(--sideLength), 1fr);
+    --sideLength: 16;
 }
 
 .clearButton {
     grid-area: clearButton;
-    border: 1px solid blue;
 }
 
 .sizeButton {
     grid-area: sizeButton;
-    border: 1px solid blue;
 }
 
+input[type='button']{
+    height: 5vh;
+    width: 200px;
+}
+
+.grid {
+    background-color: lightgray;
+}

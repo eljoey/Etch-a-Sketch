@@ -1,0 +1,49 @@
+.grid-container {
+    padding-top: 5vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: 10vh 5vh 60vh 5vh;
+    grid-template-areas: 
+        'header header header'
+        'blackButton randomButton chooseButton'
+        'drawGrid drawGrid drawGrid'
+        'clearButton . sizeButton';
+    border: 1px solid black;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid blue;
+}
+
+.blackButton {
+    grid-area: blackButton;
+    border: 1px solid blue;
+}
+
+.randomButton {
+    grid-area: randomButton;
+    border: 1px solid blue;
+}
+
+.chooseButton {
+    grid-area: chooseButton; 
+    border: 1px solid blue;   
+}
+
+.drawGrid {
+    grid-area: drawGrid;
+    border: 1px solid blue;
+}
+
+.clearButton {
+    grid-area: clearButton;
+    border: 1px solid blue;
+}
+
+.sizeButton {
+    grid-area: sizeButton;
+    border: 1px solid blue;
+}
+

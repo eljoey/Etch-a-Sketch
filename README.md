@@ -1,6 +1,6 @@
 # EtchASketch
 
-Basic Etch A Sketch using Html, CSS and JavaScript
+Basic EtchASketch project for The Odin Project.
 
 ## Instructions
 

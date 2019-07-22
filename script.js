@@ -4,12 +4,6 @@ let gridSize = 16;
 let randomPaint = false;
 let gradualPaint = false;
 
-//test function THROW AWAY WHEN DONE! AYAYA!
-function log() {
-    console.log('AYAYA');
-}
-
-
 function makeGrid() {
     resetGrid();
 
@@ -67,7 +61,7 @@ function blackBrush() {
 
 function rainbow() {
     resetGrid();
-    randomColor();
+    randomPaint = true;
 }
 
 function randomColor() {
@@ -77,7 +71,6 @@ function randomColor() {
     const rand3 = Math.floor(Math.random() * 255);
     
     color = 'rgb(' + rand1 + ', ' + rand2 + ', ' + rand3 + ')';
-    randomPaint = true;
     paintColor = color;
 }
 

@@ -1,25 +1,27 @@
 body {
     font-family: 'Raleway Dots', cursive;
     text-align: center;
-    background-color: tomato;
+    background-color: lightblue;
 
 }
 
 .grid-container {
-    padding-top: 5vh;
+    padding-top: 25px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(5, 200px);
     grid-template-rows: 10vh 5vh 600px 5vh;
     grid-template-areas: 
-        'header header header'
-        'blackButton randomButton chooseButton'
-        'gridArea gridArea gridArea'
-        'clearButton . sizeButton';
+        'header header header header header'
+        '. blackButton randomButton chooseButton .'
+        '. gridArea gridArea gridArea .'
+        '. clearButton . sizeButton .';
+    grid-gap: 5px;    
 }
 
 .header {
     grid-area: header;
+    font-size: 20px;
 }
 
 .blackButton {
@@ -37,10 +39,12 @@ body {
 .gridArea {    
     grid-area: gridArea;
     border: 2vh solid red;
+    background: black;
     display: grid;
     grid-template-columns: repeat(var(--sideLength), 1fr);
     grid-template-rows: repeat(var(--sideLength), 1fr);
     --sideLength: 16;
+    border-radius: 15px;
 }
 
 .clearButton {
@@ -54,8 +58,9 @@ body {
 input[type='button']{
     height: 5vh;
     width: 200px;
+    font-family: sans-serif;
 }
 
-.grid {
+.grids {
     background-color: lightgray;
 }

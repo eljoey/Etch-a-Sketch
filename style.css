@@ -1,66 +1,82 @@
 body {
-    font-family: 'Raleway Dots', cursive;
-    text-align: center;
-    background-color: lightblue;
-
+  font-family: 'Raleway Dots', cursive;
+  text-align: center;
+  background-color: lightblue;
 }
 
 .grid-container {
+  padding-top: 25px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: 10vh 5vh 600px 5vh;
+  grid-template-areas:
+    'header header header header header'
+    '. blackButton randomButton chooseButton .'
+    '. gridArea gridArea gridArea .'
+    '. clearButton . sizeButton .';
+  grid-gap: 5px;
+}
+
+.header {
+  grid-area: header;
+  font-size: 20px;
+}
+
+.blackButton {
+  grid-area: blackButton;
+}
+
+.randomButton {
+  grid-area: randomButton;
+}
+
+.chooseButton {
+  grid-area: chooseButton;
+}
+
+.gridArea {
+  grid-area: gridArea;
+  border: 2vh solid red;
+  background: black;
+  display: grid;
+  grid-template-columns: repeat(var(--sideLength), 1fr);
+  grid-template-rows: repeat(var(--sideLength), 1fr);
+  --sideLength: 16;
+  border-radius: 15px;
+}
+
+.clearButton {
+  grid-area: clearButton;
+}
+
+.sizeButton {
+  grid-area: sizeButton;
+}
+
+input[type='button'] {
+  height: 5vh;
+  width: 200px;
+  font-family: sans-serif;
+}
+
+.grids {
+  background-color: lightgray;
+}
+
+@media screen and (min-width: 900px) {
+  .grid-container {
+    width: 90%;
     padding-top: 25px;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(5, 200px);
-    grid-template-rows: 10vh 5vh 600px 5vh;
-    grid-template-areas: 
-        'header header header header header'
-        '. blackButton randomButton chooseButton .'
-        '. gridArea gridArea gridArea .'
-        '. clearButton . sizeButton .';
-    grid-gap: 5px;    
-}
-
-.header {
-    grid-area: header;
-    font-size: 20px;
-}
-
-.blackButton {
-    grid-area: blackButton;
-}
-
-.randomButton {
-    grid-area: randomButton;
-}
-
-.chooseButton {
-    grid-area: chooseButton;
-}
-
-.gridArea {    
-    grid-area: gridArea;
-    border: 2vh solid red;
-    background: black;
-    display: grid;
-    grid-template-columns: repeat(var(--sideLength), 1fr);
-    grid-template-rows: repeat(var(--sideLength), 1fr);
-    --sideLength: 16;
-    border-radius: 15px;
-}
-
-.clearButton {
-    grid-area: clearButton;
-}
-
-.sizeButton {
-    grid-area: sizeButton;
-}
-
-input[type='button']{
-    height: 5vh;
-    width: 200px;
-    font-family: sans-serif;
-}
-
-.grids {
-    background-color: lightgray;
+    grid-template-rows: 10vw 5vw 70vw 5vw;
+    grid-template-areas:
+      'header header header header header'
+      '. blackButton randomButton chooseButton .'
+      '. gridArea gridArea gridArea .'
+      '. clearButton . sizeButton .';
+    grid-gap: 5px;
+  }
 }

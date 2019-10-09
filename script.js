@@ -15,7 +15,6 @@ function makeGrid() {
     box.className = 'grids'
     box.style.setProperty('opacity', 0.9)
     box.addEventListener('mouseenter', colorGrid)
-    box.addEventListener('touchmove', colorGrid, true)
     grid.appendChild(box)
   }
 }

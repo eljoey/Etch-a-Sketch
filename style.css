@@ -63,20 +63,3 @@ input[type='button'] {
 .grids {
   background-color: lightgray;
 }
-
-@media screen and (min-width: 900px) {
-  .grid-container {
-    width: 90%;
-    padding-top: 25px;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: 10vw 5vw 70vw 5vw;
-    grid-template-areas:
-      'header header header header header'
-      '. blackButton randomButton chooseButton .'
-      '. gridArea gridArea gridArea .'
-      '. clearButton . sizeButton .';
-    grid-gap: 5px;
-  }
-}
